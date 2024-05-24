@@ -15,15 +15,10 @@ def abrir_cmd():
 
 
 def iginorar_janela():
-    pyautogui.moveTo(673,581, duration=2)
-    pyautogui.click()
-    pyautogui.moveTo(1033,632, duration=2)
-    pyautogui.click()
-
-
-def iginorar_janela_adm():
-    pyautogui.moveTo(888,518, duration=2)
-    pyautogui.click()
+    sleep(0.5)
+    pyautogui.hotkey('left', 'enter')
+    sleep(0.5)
+    pyautogui.hotkey('right', 'right', 'enter')
 
 
 def limpar_cache(pasta):
@@ -34,8 +29,10 @@ def limpar_cache(pasta):
     limpar_pasta()
     sleep(2)
     iginorar_janela()
-    iginorar_janela_adm()
-    iginorar_janela()
+
+
+def fechar_janela():
+    pyautogui.hotkey('alt', 'f4')
 
 
 # PROGRAMA PRINCIPAL
@@ -43,10 +40,17 @@ def limpar_cache(pasta):
 # Limpar %temp%
 limpar_cache('%temp%')
 sleep(10)
+fechar_janela()
+sleep(2)
 
 # Limpar temp
 limpar_cache('temp')
 sleep(10)
+fechar_janela()
+
+sleep(2)
 
 # Limpar prefetch
 limpar_cache('prefetch')
+sleep(10)
+fechar_janela()
