@@ -39,18 +39,17 @@ def fechar_janela():
 
 # Limpar %temp%
 limpar_cache('%temp%')
-sleep(10)
-fechar_janela()
-sleep(2)
+sleep(15)
 
 # Limpar temp
 limpar_cache('temp')
-sleep(10)
-fechar_janela()
-
-sleep(2)
+sleep(15)
 
 # Limpar prefetch
 limpar_cache('prefetch')
-sleep(10)
+sleep(15)
+
+# Fechar janelas
+fechar_janela()
+fechar_janela()
 fechar_janela()
